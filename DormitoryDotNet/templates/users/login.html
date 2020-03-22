@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Login new user{% endblock title %}
+
+{% block content %}
+    {% if form.errors %}
+        <p class="alert alert-info">Your username or password do not match</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'users:login' %}">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="submit" type="button" class="btn btn-primary">Log in</button>
+    <input type="hidden" name="next" value="{% url 'DormitoryManagement:index' %}" />
+    </form>
+
+{% endblock content %}
