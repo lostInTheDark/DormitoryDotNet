@@ -9,7 +9,7 @@
     <form method="POST" action="{% url 'users:login' %}">
     {% csrf_token %}
     {{form.as_p}}
-    <button name="submit" type="button" class="btn btn-primary">Log in</button>
+    <button name="submit" class="btn btn-primary">Log in</button>
     <input type="hidden" name="next" value="{% url 'DormitoryManagement:index' %}" />
     </form>
 

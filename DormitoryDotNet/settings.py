@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DormitoryManagement.apps.DormitorymanagementConfig',
-    'users'
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = ''
+MEDIA_URL = ''
