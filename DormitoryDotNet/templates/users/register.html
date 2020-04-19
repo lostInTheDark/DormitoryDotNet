@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Register new user{% endblock title %}
+
+{% block content %}
+    <h1>Register DormitoryDotNet </h1>
+    {% if registered %}
+        <strong>Thanks for you registering</strong>
+        <a href="{% url 'DormitoryManagement:index' %}">Return to home </a>
+    {% else %}
+        <strong>Please, register here!</strong>
+
+        <form method="POST" action="{% url 'users:register' %}">
+            {% csrf_token %}
+
+            {{user_form.as_p}}
+            {{profile_form.as_p}}
+            
+            <button name="submit" class="btn btn-primary">Register</button>
+            <input type="hidden" name="next" value="{% url 'DormitoryManagement:index' %}" />
+        </form>
+
+    {% endif %}
+{% endblock content %}

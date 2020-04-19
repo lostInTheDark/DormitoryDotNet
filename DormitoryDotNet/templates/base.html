@@ -10,16 +10,21 @@
     crossorigin="anonymous">
 </head>
 <body>
-    <p>
-        <a href="{% url 'DormitoryManagement:index' %}">DormitoryDotNet</a>
-        {% if user.is_authenticated %}
-            Hello, {{user.username}}
-            <a href="{% url 'users:logout' %}"> Log out </a>
-        {% else %}
-            <a href="{% url 'users:login' %}">Log in</a>
-        {% endif %}
-    </p>
-    {% block content %}
-    {% endblock content %}
+    <div class="container">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <a class="masthead-brand" href="{% url 'DormitoryManagement:index' %}">DormitoryDotNet</a>
+                {% if user.is_authenticated %}
+                    Hello, {{user.username}}
+                    <a href="{% url 'users:logout' %}"> Log out </a>
+                {% else %}
+                    <a href="{% url 'users:login' %}">Log in</a>-
+                    <a href="{% url 'users:register' %}"> Register </a>
+                {% endif %}
+            <div>
+        </header>
+        {% block content %}
+        {% endblock content %}
+    </div>
 </body>
 </html>
