@@ -2,6 +2,7 @@
 {% block title %}Login new user{% endblock title %}
 
 {% block content %}
+<div class="text-center">
     {% if form.errors %}
         <p class="alert alert-info">Your username or password do not match</p>
     {% endif %}
@@ -12,5 +13,5 @@
     <button name="submit" class="btn btn-primary">Log in</button>
     <input type="hidden" name="next" value="{% url 'DormitoryManagement:index' %}" />
     </form>
-
+</div>
 {% endblock content %}
