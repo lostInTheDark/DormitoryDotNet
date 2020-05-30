@@ -9,7 +9,7 @@
     {% else %}
         <strong>Please, register here!</strong>
 
-        <form method="POST" action="{% url 'users:register' %}" enctype="multipart/form-data ">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
             {{user_form.as_p}}
