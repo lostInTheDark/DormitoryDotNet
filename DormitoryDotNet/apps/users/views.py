@@ -4,6 +4,8 @@ from django.urls import reverse
 from django.contrib.auth import logout, login
 from .forms import UserForm, UserProfileForm
 from django.template import RequestContext
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 def logout_views(request):
@@ -42,3 +44,16 @@ def register(request):
 
     context = {'user_form': user_form, 'profile_form': profile_form}
     return render(request, 'users/register.html', context)
+
+def single_post(request):
+    return render(request, 'users/gallery-single-post.html')
+
+@login_required
+def profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk)
+    else:
+        user = request.user
+    args = {'user': user}
+
+    return render(request, 'users/profile.html', args)

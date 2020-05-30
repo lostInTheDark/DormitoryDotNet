@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Вітаємо, {{user}}{% endblock title %}
+
+{% block content %}
+<div id="body">
+		<h1><span>Профіль</span></h1>
+		<ul class="gallery">
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache1.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache2.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache3.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache4.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache5.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache6.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache7.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache8.jpg'%}" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'users:single_post' %}">
+					<img src="{% static 'images/mustache9.jpg'%}" alt="">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div>
+			<p>&copy; 2020 TNEUDormitory.net</p>
+			<ul>
+				<li>
+					<a href="#" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="#" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="#" id="googleplus">googleplus</a>
+				</li>
+				<li>
+					<a href="#" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock content %}

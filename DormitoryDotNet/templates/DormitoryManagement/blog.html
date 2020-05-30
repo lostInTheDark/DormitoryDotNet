@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<div id="body">
+		<h1><span>Новини</span></h1>
+		<div>
+			<ul>
+				<li>
+					<a href="{% url 'DormitoryManagement:single_post' %}" class="figure">
+						<img src="{% static 'images/cutting-mustache.jpg'%}" alt="">
+					</a>
+					<div>
+						<h3>why i grew a mustache</h3>
+						<p>
+							Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them.
+						</p>
+						<a href="{% url 'DormitoryManagement:single_post' %}" class="more">read this</a>
+					</div>
+				</li>
+				<li>
+					<a href="{% url 'DormitoryManagement:single_post' %}" class="figure">
+						<img src="{% static 'images/in-the-country.jpg'%}" alt="">
+					</a>
+					<div>
+						<h3>in the country</h3>
+						<p>
+							Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them.
+						</p>
+						<a href="{% url 'DormitoryManagement:single_post' %}" class="more">read this</a>
+					</div>
+				</li>
+				<li>
+					<a href="{% url 'DormitoryManagement:single_post' %}" class="figure">
+						<img src="{% static 'images/mustache-brothers.jpg'%}" alt="">
+					</a>
+					<div>
+						<h3>the mustache brothers</h3>
+						<p>
+							Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them.
+						</p>
+						<a href="{% url 'DormitoryManagement:single_post' %}" class="more">read this</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p>&copy; 2020 TNEUDormitory.net</p>
+			<ul>
+				<li>
+					<a href="#" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="#" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="#" id="googleplus">googleplus</a>
+				</li>
+				<li>
+					<a href="#" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock content %}
