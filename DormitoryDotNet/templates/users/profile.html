@@ -5,55 +5,41 @@
 
 {% block content %}
 <div id="body">
-		<h1><span>Профіль</span></h1>
-		<ul class="gallery">
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache1.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache2.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache3.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache4.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache5.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache6.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache7.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache8.jpg'%}" alt="">
-				</a>
-			</li>
-			<li>
-				<a href="{% url 'users:single_post' %}">
-					<img src="{% static 'images/mustache9.jpg'%}" alt="">
-				</a>
-			</li>
-		</ul>
-	</div>
+		<h1><span>Профіль</span></h1><br><br><br>
+		
+
+		<div class="wrapper">
+			<div class="left">
+				<img src="images/12.png" 
+				alt="user" width="100">
+				<h3>Зоряна Чижовська</h3>
+				<h3>Кімната №96</h3>
+			</div>
+			<div class="right">
+				<div class="info">
+					<h3>Information</h3>
+					<div class="info_data">
+						 <div class="data">
+							<h4>Email</h4>
+							<p>zoriana.chyzhovska@gmail.com</p>
+						 </div>
+						 <div class="data">
+						   <h4>Phone</h4>
+							<p>000 000 00 00</p>
+					  </div>
+					</div>
+				</div>
+			  
+				<div class="rate">
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star "></span>
+				</div>
+			</div>
+		</div>
+	</div><br><br>
 	<div id="footer">
 		<div>
 			<p>&copy; 2020 TNEUDormitory.net</p>
