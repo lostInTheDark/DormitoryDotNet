@@ -6,6 +6,7 @@ from .forms import UserForm, UserProfileForm
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 def logout_views(request):
@@ -24,6 +25,7 @@ def register(request):
             user = user_form.save()
 
             user.set_password((user.password))
+            user.is_active = False
             user.save()
 
             profile = profile_form.save(commit=False)
@@ -33,7 +35,7 @@ def register(request):
                 profile.prof_pic = request.Files['picture']
             profile.save()
 
-            login(request, user)
+            messages.success(request, "Your data sent to admin for approv!")
             return HttpResponseRedirect(reverse('DormitoryManagement:index'))
         else:
             print(user_form.errors, profile_form.errors)

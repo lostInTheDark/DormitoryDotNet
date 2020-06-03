@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Page Not Found{% endblock title %}
+
+{% block content %}
+	<p><img src="{% {% static 'images/404.png'%}" alt="" width="100%"></p>
+	<div id="footer">
+		<div>
+			<p>&copy; 2020 TNEUDormitory.net</p>
+			<ul>
+				<li>
+					<a href="#" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="#" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="#" id="googleplus">googleplus</a>
+				</li>
+				<li>
+					<a href="#" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock content %}

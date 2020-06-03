@@ -24,7 +24,7 @@ body {
  font-weight: normal;
  line-height: 1;
  margin: 0;
- min-width: 960px;
+ min-width: 500px;
  padding: 0;
 }
 p {
@@ -44,7 +44,7 @@ p a:hover {
 	margin: 0 auto;
 	padding: 15px 0 15px;
 	text-align: center;
-	width: 1500px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 }
@@ -52,7 +52,7 @@ p a:hover {
 	display: block;
 	margin: 1 auto;
 	padding: 0;
-	width: 720px;
+	width: 40%;
 }
 #header a.logo img {
 	border: 0;
@@ -62,7 +62,7 @@ p a:hover {
 }
 #header ul {
 	margin: 0;
-	padding: 56px 0 0;
+	padding: 50px 0 0;
 }
 #header ul li {
 	display: inline;
@@ -102,12 +102,12 @@ p a:hover {
 #body h1 span {
 	background: #252525;
 	display: inline-block;
-	padding: 15px 28px 12px;
+	padding: 15px 25px 12px;
 }
 #body > div {
 	margin: 0 auto;
 	padding: 0;
-	width: 960px;
+	width: 100%;
 }
 #body > div img {
 	border: 2px solid #292929;
@@ -117,7 +117,7 @@ p a:hover {
 #body > div .article {
 	margin: 0 auto;
 	padding: 30px 30px 0;
-	width: 560px;
+	width: 50%;
 }
 #body > div .article h2 {
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -147,7 +147,7 @@ p a:hover {
 #body div ul {
 	margin: 0;
 	padding: 24px 10px 0;
-	width: 940px;
+	width: 100%;
 }
 #body div ul li {
 	border: 2px solid #1a1a1a;
@@ -162,7 +162,6 @@ p a:hover {
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 376px;
 }
 #body div ul li img {
 	border: 0;
@@ -179,7 +178,7 @@ p a:hover {
 	float: left;
 	margin: 0;
 	padding: 63px 0 20px;
-	width: 558px;
+	width: 50%;
 }
 #body div ul li div h3 {
 	color: #252525;
@@ -224,14 +223,19 @@ p a:hover {
 	width: 100%;
 }
 #body #featured div {
-	left: 50%;
-	margin-left: -480px;
+	float: left;
 	margin-top: -171px;
-	padding: 0 0 0 470px;
+	padding: 0 0 0 0px;
 	position: absolute;
 	top: 50%;
 	text-align: left;
 	width: 490px;
+}
+#featured div{
+	left: 60%;
+	float:right; 
+	text-align: right;
+	margin: 0 0 0 auto;
 }
 #body #featured div h2 {
 	background: #E8E8E8;
@@ -272,8 +276,8 @@ p a:hover {
 #body > ul {
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 24px 0 0;
-	width: 960px;
+	padding: 20px 0 0;
+	width: 72%;
 }
 #body > ul li {
 	display: block;
@@ -316,7 +320,7 @@ p a:hover {
 #body form {
 	margin: 0 auto;
 	padding: 24px 0 0;
-	width: 620px;
+	width: 60%;
 }
 #body form input, #body form textarea {
 	border: 2px solid #252525;
@@ -328,7 +332,7 @@ p a:hover {
 	padding: 20px 10px;
 	text-align: center;
 	text-transform: uppercase;
-	width: 596px;
+	width: 50%;
 }
 #body form textarea {
 	height: 175px;
@@ -359,7 +363,7 @@ p a:hover {
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
-	width: 960px;
+	width: 100%;
 }
 #footer div p {
 	color: #fff;
@@ -374,7 +378,7 @@ p a:hover {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
-	width: 256px;
+	width: 25%;
 }
 #footer div ul li {
 	display: block;

@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
+	{% if messages %}
+		{% for message in messages %}
+			{% if message.tags %} 
+				<script>alert('{{message}}');</script>	
+			{%endif%}
+		{% endfor %}
+	{% endif %}
+
 <div id="body">
 		<div id="featured">
 			<img src="{% static 'images/IMG_20200525_192340.jpg'%}" alt="">
