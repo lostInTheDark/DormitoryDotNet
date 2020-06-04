@@ -1,46 +1,11 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Карта - TNEUDormitory.net</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
-	<script type="text/javascript" src="js/mobile.js"></script>
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-</head>
-<body>
-
-	<div id="header">
-		<a href="index.html" class="logo">
-			<img src="images/logo.png" alt="">
-		</a>
-		<ul id="navigation">
-			<li>
-				<a href="index.html">головна</a>
-			</li>
-			<li class="selected">
-				<a href="map1.html">карта</a>
-			</li>
-			<li>
-				<a href="profile.html">профіль</a>
-			</li>
-			<li>
-				<a href="blog.html">новини</a>
-			</li>
-			<li>
-				<a href="contact.html">контакти</a>
-			</li>
-			<li>
-				<a href="login.html">увійти</a>
-			</li>
-		</ul>
-	</div>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 	<div id="body">
 		<h1><span>КАРТА</span></h1><br>
 		<h2>Поверх №4</h2> 
 		<div class="mapc"> 
-			<img id="map" src="images/4.png" alt="" width="1098" height="228" usemap="#Map">
+			<img id="map" src="{% static 'images/4.png'%}" alt="" width="1098" height="228" usemap="#Map">
 			<map name="Map">
 				<area shape="rect" coords="149,41,186,110" href="#">
 				<area shape="rect" coords="185,40,222,109" href="#">
@@ -80,10 +45,10 @@
 			</map>
 		</div><br>
 		<div class="floor">
-			<a href="map1.html">Поверх #1</a>
-			<a href="map2.html">Поверх #2</a>
-			<a href="map3.html">Поверх #3</a>
-			<a href="map5.html">Поверх #5</a><br>
+			<a href="{% url 'DormitoryManagement:map1' %}">Поверх #1</a>
+			<a href="{% url 'DormitoryManagement:map2' %}">Поверх #2</a>
+			<a href="{% url 'DormitoryManagement:map3' %}">Поверх #3</a>
+			<a href="{% url 'DormitoryManagement:map5' %}">Поверх #5</a><br>
 		</div>
 
 	</div><br><br><br><br><br><br><br>
@@ -106,5 +71,6 @@
 			</ul>
 		</div>
 	</div>
-</body>
-</html>
+
+
+{% endblock content %}
