@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block addition_style %}
+{% endblock addition_style %}
+
 {% block content %}
 	{% if messages %}
 		{% for message in messages %}
@@ -12,13 +15,13 @@
 
 <div id="body">
 		<div id="featured">
-			<img src="images/IMG_20200525_192340.jpg" alt="">
+			<img src="{% static 'images/IMG_20200525_192340.jpg'%}" alt="">
 			<div>
 				<h2><b>Закрита соціальна мережа твого гуртожитку</b></h2>
 				<span>Проект, розроблений тільки для мешканців Гуртожитку №1 ТНЕУ</span>
 				<span>Новини, Рейтинг, Інформація та  багато іншого</span>
 				<span>Це покращить твоє життя у гуртожитку</span>
-				<a href="login.html" class="more">Увійти / Приєднатись</a>
+				<a href="{% url 'users:login' %}" class="more">Увійти / Приєднатись</a>
 			</div>
 		</div>
 		<h1><span>НАША КОМАНДА</span></h1><br>
@@ -96,5 +99,5 @@
 			</ul>
 		</div>
 	</div>
-	<script src="preloader/preloader.js"></script>
+	<script src="{% static 'preloader/preloader.js'%}"></script>
 {% endblock content %}

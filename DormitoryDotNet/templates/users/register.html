@@ -8,15 +8,23 @@
         <strong>Thanks for you registering</strong>
         <a href="{% url 'DormitoryManagement:index' %}">Return to home </a>
     {% else %}
-        <form method="POST" enctype="multipart/form-data">
+        <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+        <form method="POST" enctype="multipart/form-data" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+            <div class="wrap-input100 validate-input m-b-16">
             {% csrf_token %}
 
             {{user_form.as_p}}
             {{profile_form.as_p}}
+            </div>
             
-            <button name="submit" class="btn btn-primary">Register</button>
+            <button name="submit" class="login100-form-btn">Register</button>
             <input type="hidden" name="next" value="{% url 'DormitoryManagement:index' %}" />
         </form>
+        </div>
+        </div>
+        </div>
 
     {% endif %}
 {% endblock content %}
